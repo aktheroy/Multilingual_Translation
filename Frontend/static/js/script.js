@@ -11,7 +11,6 @@ document.getElementById('translateBtn').addEventListener('click', function () {
   const targetLang = document.getElementById('targetLang').value;
   const translatedTextArea = document.getElementById('translatedText');
 
-  // Send a POST request to the Flask backend
   fetch('/translate', {
       method: 'POST',
       headers: {
@@ -25,14 +24,14 @@ document.getElementById('translateBtn').addEventListener('click', function () {
   })
   .then(response => response.json())
   .then(data => {
-      // Update the translated text area with the response
-      translatedTextArea.value = data.translated_text;
-      adjustTextareaHeight(translatedTextArea);
+      translatedTextArea.value = data.translated_text; // Display translation
+      adjustTextareaHeight(translatedTextArea); // Adjust height dynamically
   })
   .catch((error) => {
       console.error('Error:', error);
   });
 });
+
 
 // Reset Button Event Listener
 document.getElementById('resetBtn').addEventListener('click', function () {
