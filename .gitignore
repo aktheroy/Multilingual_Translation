@@ -1,0 +1,111 @@
+# Ignore Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Ignore Python virtual environment
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore logs
+logs/
+*.log
+
+
+# Ignore model checkpoints and saved models
+Model/
+*.pt
+*.pth
+*.bin
+*.h5
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore TensorBoard logs
+runs/
+
+# Ignore temporary files
+*.swp
+*.swo
+*.tmp
+
+# Ignore cache directories
+.cache/
+
+# Ignore any compiled files
+*.class
+*.exe
+
+# Ignore any backup files
+*~
+
+# Ignore any local configuration files
+*.local
+
+# Ignore any sensitive files
+*.key
+*.pem
+*.crt
+*.pfx
+*.p12
+*.gpg
+
+# Ignore any large data files
+*.npy
+*.npz
+
+# Ignore any large model files
+*.onnx
+*.pb
+
+# Ignore any large dataset files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Ignore any large output files
+*.out
+
+# Ignore any large temporary files
+*.temp
+
+# Ignore any large binary files
+*.bin
+
+
+# Ignore any large video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+
+# Ignore any large audio files
+*.mp3
+*.wav
+*.ogg
+*.flac
+
+# Ignore any large database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Ignore any large configuration files
+*.ini
+*.cfg
+*.conf
