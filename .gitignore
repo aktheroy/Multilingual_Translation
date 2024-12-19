@@ -91,7 +91,6 @@ runs/
 
 
 # Ignore any large video files
-*.mp4
 *.avi
 *.mov
 *.mkv
