@@ -86,6 +86,9 @@ runs/
 # Ignore any large binary files
 *.bin
 
+# Ignore any large binary files
+*.docx
+
 
 # Ignore any large video files
 *.mp4
