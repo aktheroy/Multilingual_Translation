@@ -2,14 +2,14 @@ import sys
 import os
 from flask import Flask, render_template, request, jsonify
 from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
-
-# Add the Backend directory to the Python path (if needed)
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Backend')))
+from flasgger import Swagger
 
 # Load the model and tokenizer
 def load_model():
-    model = M2M100ForConditionalGeneration.from_pretrained("facebook/m2m100_418M")
-    tokenizer = M2M100Tokenizer.from_pretrained("facebook/m2m100_418M")
+    model = M2M100ForConditionalGeneration.from_pretrained("aktheroy/Hipster")
+    tokenizer = M2M100Tokenizer.from_pretrained("aktheroy/Hipster")
+    print(f"Model loaded: {model.__class__.__name__}")
+    print(f"Tokenizer loaded: {tokenizer.__class__.__name__}")
     return model, tokenizer
 
 # Translate text using the model
@@ -23,6 +23,9 @@ def translate_text(model, tokenizer, source_text, source_lang, target_lang):
 # Initialize Flask app
 app = Flask(__name__, template_folder='../Frontend/Templates', static_folder='../Frontend/static')
 
+# Configure Swagger
+swagger = Swagger(app)
+
 # Load the model and tokenizer at startup
 model, tokenizer = load_model()
 
@@ -34,6 +37,40 @@ def index():
 # Route for translation
 @app.route('/translate', methods=['POST'])
 def translate():
+    """
+    Translate text from one language to another.
+    ---
+    tags:
+      - Translation
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            source_text:
+              type: string
+              example: "Hello, how are you?"
+              description: The text to translate.
+            source_lang:
+              type: string
+              example: "en"
+              description: The source language code.
+            target_lang:
+              type: string
+              example: "fr"
+              description: The target language code.
+    responses:
+      200:
+        description: Successfully translated text.
+        schema:
+          type: object
+          properties:
+            translated_text:
+              type: string
+              example: "Bonjour, comment ça va ?"
+    """
     data = request.get_json()
     source_text = data.get('source_text')
     source_lang = data.get('source_lang')
