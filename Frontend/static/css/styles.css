@@ -24,7 +24,8 @@ body {
 
 /* card styling */
 .card {
-  width: 600px; /* Increased width */
+  width: 45%; /* Adjusted width for side-by-side layout */
+  max-width: 600px; /* Limit max-width */
   min-height: 300px; /* Increased min-height */
   max-height: 500px; /* Limited max-height */
   background: rgba(255, 255, 255, 0.15);
@@ -75,13 +76,26 @@ body {
   background-position: right 0.5rem center;
   background-size: 1rem;
   padding-right: 1.5rem; /* Add padding to prevent text from overlapping with the arrow */
-
+  transition: all 0.3s ease; /* Smooth transition for hover and focus */
 }
 
-.language-pair select option {
-  background: rgba(132, 121, 121, 0.462);
-  color: whitesmoke;
+/* Hover State */
+.language-pair select:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
 
+/* Focus State */
+.language-pair select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(44, 73, 220, 0.07);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* Disabled State */
+.language-pair select:disabled {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(245, 245, 245, 0.5);
+  cursor: not-allowed;
 }
 
 textarea {
@@ -92,7 +106,7 @@ textarea {
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.204); /* Semi-transparent background */
   color: whitesmoke; /* Text color */
   font-size: 1rem;
   resize: none;
@@ -103,10 +117,9 @@ textarea {
 
 /* Placeholder Styling */
 .textarea::placeholder {
-    color: rgba(247, 237, 237, 0.836); /* White placeholder text with some transparency */
-    font-size: 1rem;
+  color: rgba(247, 237, 237, 0.836); /* White placeholder text with some transparency */
+  font-size: 1rem;
 }
-  
 
 /* Custom Scrollbar for Textareas */
 textarea::-webkit-scrollbar {
@@ -158,7 +171,6 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 /* Blob Styling */
-
 .blob {
   position: absolute;
   width: 500px;
@@ -207,5 +219,48 @@ textarea::-webkit-scrollbar-thumb:hover {
   to {
     transform: translate(500px, 100px) rotate(-10deg);
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    gap: 1rem; /* Reduced gap for smaller screens */
+  }
+
+  .card {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+    width: 95%;
+  }
+  .container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    gap: 1rem; /* Reduced gap for smaller screens */
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .language-pair label,
+  .language-pair select,
+  textarea,
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  textarea {
+    min-height: 80px;
+    max-height: 150px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
   }
 }
