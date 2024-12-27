@@ -97,6 +97,9 @@ body {
   color: rgba(245, 245, 245, 0.5);
   cursor: not-allowed;
 }
+.textarea-container {
+  position: relative; /* Required for positioning the word counter */
+}
 
 textarea {
   width: 100%;
@@ -104,6 +107,7 @@ textarea {
   min-height: 100px; /* Minimum height */
   max-height: 200px; /* Limited max-height */
   padding: 0.5rem;
+  padding-bottom: 30px;
   border-radius: 0.5rem;
   border: none;
   background: rgba(255, 255, 255, 0.204); /* Semi-transparent background */
@@ -111,6 +115,7 @@ textarea {
   font-size: 1rem;
   resize: none;
   margin-bottom: 1rem;
+  box-sizing: border-box;
   transition: height 0.3s ease; /* Smooth transition for height changes */
   overflow-y: auto; /* Auto-hiding scrollbar */
 }
@@ -139,6 +144,16 @@ textarea::-webkit-scrollbar-thumb {
 textarea::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
+.word-count {
+  position: absolute;
+  bottom: 10px; /* Position at the bottom of the textarea */
+  right: 10px; /* Position at the right of the textarea */
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  padding: 2px 6px;
+  border-radius: 4px;
+}
 
 /* Button Styling */
 .btn {
@@ -152,7 +167,7 @@ textarea::-webkit-scrollbar-thumb:hover {
   border-radius: 1rem;
   cursor: pointer;
   align-self: flex-start;
-  transition: all 0.5s ease; /* Smooth transition for hover effects */
+  transition: all 2s ease; /* Smooth transition for hover effects */
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -164,10 +179,10 @@ textarea::-webkit-scrollbar-thumb:hover {
 
 .btn:hover {
   transform: scale(1.1); /* Slightly enlarge the button */
-  box-shadow: 0 0px 2px 0  rgba(255, 255, 255, 0.6),
-  inset 100px 100px 0 0px rgb(237, 88, 132),
-  inset 200px 200px 0 0px rgb(120, 75, 168),
-  inset 300px 300px 0 0px rgb(43, 134, 197); /* Add shadow for a 3D effect */
+  box-shadow: 0 0px 2px 0  rgba(255, 255, 255, 0.254),
+  inset 100px 100px 0 0px rgb(250, 112, 154),
+  inset 200px 200px 0 0px rgb(152, 8, 235),
+  inset 300px 300px 0 0px rgb(10, 128, 238); /* Add shadow for a 3D effect */
 }
 
 /* Blob Styling */
@@ -197,6 +212,73 @@ textarea::-webkit-scrollbar-thumb:hover {
     inset 200px 200px 0 0px rgb(120, 75, 168),
     inset 300px 300px 0 0px rgb(43, 134, 197);
 }
+
+/* Social Links Container */
+.social-links {
+  position: fixed;
+  bottom: 80px; /* Moved higher */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Pill-shaped Social Links */
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Fixed width for circular shape */
+  height: 40px; /* Fixed height for circular shape */
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 50%; /* Circular shape */
+  border: 2px solid transparent; /* Transparent border */
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* LinkedIn Button */
+.social-link.linkedin {
+  background-color: transparent;
+  border-color: #5c9df1; /* LinkedIn blue border */
+}
+
+.social-link.linkedin i {
+  color: #5c9df1; /* LinkedIn blue icon */
+}
+
+/* GitHub Button */
+.social-link.github {
+  background-color: transparent;
+  border-color: #ef159f; /* GitHub green border */
+}
+
+.social-link.github i {
+  color: #ef159f; /* GitHub green icon */
+}
+
+/* Hover Effects */
+.social-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-link.linkedin:hover {
+  background-color: rgba(0, 119, 181, 0.1); /* Light LinkedIn blue background */
+}
+
+.social-link.github:hover {
+  background-color: rgba(40, 167, 69, 0.1); /* Light GitHub green background */
+}
+
+/* Active (Click) Effects */
+.social-link:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 @-webkit-keyframes move {
   from {

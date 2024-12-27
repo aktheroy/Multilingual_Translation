@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hipster Assessments</title>
+  <title>Multilingual Translator</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
@@ -18,12 +19,17 @@
           <select id="sourceLang">
             <option value="en">English</option>
             <option value="hi">Hindi</option>
+            <option value="hi">Greek</option>
+
             <!-- Add more languages as needed -->
           </select>
         </div>
       </div>
       <div class="title">Input Text</div>
-      <textarea id="sourceText"  class="textarea"  placeholder="Enter text here..."></textarea>
+      <div class="textarea-container"> <!-- Container for textarea and word counter -->
+        <textarea id="sourceText" class="textarea" placeholder="Enter text here..."></textarea>
+        <span id="wordCount" class="word-count">80</span> <!-- Word counter inside textarea -->
+      </div>
       <button id="translateBtn" class="btn">Translate</button>
     </div>
         
@@ -36,6 +42,8 @@
           <select id="targetLang">
             <option value="hi">Hindi</option>
             <option value="en">English</option>
+            <option value="hi">Greek</option>
+
             <!-- Add more languages as needed -->
           </select>
         </div>
@@ -46,6 +54,15 @@
     </div>
     <!-- Background Blob -->
     <div class="blob"></div>
+  </div>
+  <!-- LinkedIn and GitHub Links -->
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/aktheroy" target="_blank" class="social-link linkedin">
+      <i class="fa-brands fa-linkedin-in"></i> <!-- LinkedIn icon -->
+    </a>
+    <a href="https://github.com/aktheroy" target="_blank" class="social-link github">
+      <i class="fa-brands fa-github"></i> <!-- GitHub icon -->
+    </a>
   </div>
   <script src="../static/js/script.js"></script>
 </body>
