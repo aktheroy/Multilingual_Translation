@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #1f1f47;
+  background: #21215b;
 }
 
 /* container -main */
@@ -28,8 +28,8 @@ body {
   max-width: 600px; /* Limit max-width */
   min-height: 300px; /* Increased min-height */
   max-height: 500px; /* Limited max-height */
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(114, 114, 114, 0.15);
+  box-shadow: 0 8px 32px 0 #21215b;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -67,8 +67,8 @@ body {
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: whitesmoke;
+  background: rgba(255, 255, 255, 0.264); /* Background color of the dropdown */
+  color: whitesmoke; /* Text color of the dropdown */
   font-size: 1rem;
   appearance: none; /* Remove default appearance */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
@@ -76,19 +76,25 @@ body {
   background-position: right 0.5rem center;
   background-size: 1rem;
   padding-right: 1.5rem; /* Add padding to prevent text from overlapping with the arrow */
-  transition: all 0.3s ease; /* Smooth transition for hover and focus */
 }
 
-/* Hover State */
-.language-pair select:hover {
-  background-color: rgba(255, 255, 255, 0.07);
+/* Customize the dropdown options */
+.language-pair select option {
+  background: #2c49dc; /* Background color of the options */
+  color: whitesmoke; /* Text color of the options */
+  padding: 0.5rem; /* Add padding to the options */
 }
 
-/* Focus State */
+/* Hover effect for dropdown options */
+.language-pair select option:hover {
+  background: #2c49dc; /* Background color on hover */
+  color: whitesmoke; /* Text color on hover */
+}
+
+/* Focus effect for dropdown */
 .language-pair select:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(44, 73, 220, 0.07);
-  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #2c49dc; /* Border color when the dropdown is focused */
 }
 
 /* Disabled State */
@@ -281,29 +287,46 @@ textarea::-webkit-scrollbar-thumb:hover {
 
 
 @-webkit-keyframes move {
-  from {
-    transform: translate(-100px, -50px) rotate(-90deg);
+  0% {
+    transform: translate(-500px, -50px) rotate(-90deg); /* Start on the left */
     border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
   }
-
-  to {
-    transform: translate(500px, 100px) rotate(-10deg);
-    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  33% {
+    transform: translate(200px, -100px) rotate(-45deg); /* Move to the right */
+    border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%;
+  }
+  33% {
+    transform: translate(100px, -100px) rotate(45deg); /* Move further to the right */
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  }
+  100% {
+    transform: translate(-100px, 150px) rotate(90deg); /* Move back to the left */
+    border-radius: 40% 60% 50% 50% / 50% 50% 60% 40%;
   }
 }
 
 @keyframes move {
-  from {
-    transform: translate(-100px, -50px) rotate(-90deg);
+  0% {
+    transform: translate(-500px, -50px) rotate(-90deg); /* Start on the left */
     border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
   }
-
-  to {
-    transform: translate(500px, 100px) rotate(-10deg);
-    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  33% {
+    transform: translate(200px, -100px) rotate(-45deg); /* Move to the right */
+    border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%;
+  }
+  33% {
+    transform: translate(100px, -100px) rotate(45deg); /* Move further to the right */
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  }
+  100% {
+    transform: translate(-100px, 150px) rotate(90deg); /* Move back to the left */
+    border-radius: 40% 60% 50% 50% / 50% 50% 60% 40%;
   }
 }
 
+.blob {
+  animation: move 20s infinite alternate ease-in-out;
+}
 /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   .container {
