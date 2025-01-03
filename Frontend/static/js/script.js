@@ -74,13 +74,13 @@ document.getElementById('resetBtn').addEventListener('click', function () {
   adjustTextareaHeight(document.getElementById('translatedText'));
 
   // Reset word count display
-  document.getElementById('wordCount').textContent = '80';
+  document.getElementById('wordCount').textContent = '50';
 });
 
 // Adjust height of the source text area dynamically and enforce word limit
 document.getElementById('sourceText').addEventListener('input', function () {
   adjustTextareaHeight(this);
-  enforceWordLimit(this, 80); // Enforce 50-word limit
+  enforceWordLimit(this, 50); // Enforce 50-word limit
 });
 
 // Listen for Enter key press in the source text area

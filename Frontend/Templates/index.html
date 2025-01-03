@@ -1,68 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multilingual Translator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="../static/css/styles.css">
-</head>
-<body>
-  <div class="container">
-    <!-- First Card -->
-    <div class="card">
-      <div class="title">Source Language</div>
-      <div class="language-pair">
-        <div>
-          <label for="sourceLang">From:</label>
-          <select id="sourceLang">
-            <option value="en">English</option>
-            <option value="hi">Hindi</option>
-            <option value="hi">Greek</option>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multilingual Translator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
 
-            <!-- Add more languages as needed -->
-          </select>
+    <!-- Inline SVG Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'>
+      <text y='.9em' font-size='50' fill='%23ffffff' font-family='Arial, sans-serif'>Ω</text></svg>"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- First Card -->
+      <div class="card">
+        <div class="title">Source Language</div>
+        <div class="language-pair">
+          <div>
+            <label for="sourceLang">From:</label>
+            <select id="sourceLang">
+              <option value="en">English</option>
+              <option value="hi">Hindi</option>
+              <option value="hi">Greek</option>
+
+              <!-- Add more languages as needed -->
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="title">Input Text</div>
-      <div class="textarea-container"> <!-- Container for textarea and word counter -->
-        <textarea id="sourceText" class="textarea" placeholder="Enter text here..."></textarea>
-        <span id="wordCount" class="word-count">80</span> <!-- Word counter inside textarea -->
-      </div>
-      <button id="translateBtn" class="btn">Translate</button>
-    </div>
-        
-    <!-- Second Card -->
-    <div class="card">
-      <div class="title">Target Language</div>
-      <div class="language-pair">
-        <div>
-          <label for="targetLang">To:</label>
-          <select id="targetLang">
-            <option value="hi">Hindi</option>
-            <option value="hi">Greek</option>
-            <option value="en">English</option>
-            <!-- Add more languages as needed -->
-          </select>
+        <div class="title">Input Text</div>
+        <div class="textarea-container">
+          <!-- Container for textarea and word counter -->
+          <textarea
+            id="sourceText"
+            class="textarea"
+            placeholder="Enter text here..."
+          ></textarea>
+          <span id="wordCount" class="word-count">50</span>
+          <!-- Word counter inside textarea -->
         </div>
+        <button id="translateBtn" class="btn">Translate</button>
       </div>
-      <div class="title">Translated Text</div>
-      <textarea id="translatedText"  class="textarea" placeholder="Translated text will appear here..." readonly></textarea>
-      <button id="resetBtn" class="btn">Reset</button>
+
+      <!-- Second Card -->
+      <div class="card">
+        <div class="title">Target Language</div>
+        <div class="language-pair">
+          <div>
+            <label for="targetLang">To:</label>
+            <select id="targetLang">
+              <option value="hi">Hindi</option>
+              <option value="hi">Greek</option>
+              <option value="en">English</option>
+              <!-- Add more languages as needed -->
+            </select>
+          </div>
+        </div>
+        <div class="title">Translated Text</div>
+        <textarea
+          id="translatedText"
+          class="textarea"
+          placeholder="Translated text will appear here..."
+          readonly
+        ></textarea>
+        <button id="resetBtn" class="btn">Reset</button>
+      </div>
+      <!-- Background Blob -->
+      <div class="blob"></div>
     </div>
-    <!-- Background Blob -->
-    <div class="blob"></div>
-  </div>
-  <!-- LinkedIn and GitHub Links -->
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/aktheroy" target="_blank" class="social-link linkedin">
-      <i class="fa-brands fa-linkedin-in"></i> <!-- LinkedIn icon -->
-    </a>
-    <a href="https://github.com/aktheroy" target="_blank" class="social-link github">
-      <i class="fa-brands fa-github"></i> <!-- GitHub icon -->
-    </a>
-  </div>
-  <script src="../static/js/script.js"></script>
-</body>
+    <!-- LinkedIn and GitHub Links -->
+    <!-- Social Links Card -->
+    <div class="social-card">
+      <a
+        href="https://www.linkedin.com/in/aktheroy"
+        target="_blank"
+        class="social-link linkedin"
+      >
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://github.com/aktheroy"
+        target="_blank"
+        class="social-link github"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a
+        href="https://aktheroy.com"
+        target="_blank"
+        class="social-link portfolio"
+      >
+        <i class="fa-solid fa-globe"></i>
+      </a>
+    </div>
+    <script src="../static/js/script.js"></script>
+  </body>
 </html>

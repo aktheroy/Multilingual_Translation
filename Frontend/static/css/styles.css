@@ -20,6 +20,7 @@ body {
   position: relative;
   overflow: hidden;
   gap: 2rem; /* Add gap between the cards */
+  padding-bottom: 100px;
 }
 
 /* card styling */
@@ -32,7 +33,7 @@ body {
   box-shadow: 0 8px 32px 0 #21215b;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.18);
   border-radius: 1rem;
   padding: 1.5rem;
   z-index: 10;
@@ -219,70 +220,68 @@ textarea::-webkit-scrollbar-thumb:hover {
     inset 300px 300px 0 0px rgb(43, 134, 197);
 }
 
-/* Social Links Container */
-.social-links {
+/* Social Card Styling */
+.social-card {
   position: fixed;
-  bottom: 80px; /* Moved higher */
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 20px;
-  z-index: 1000; /* Ensure it's above other elements */
+  gap: 15px;
+  background: rgba(114, 114, 114, 0.15);
+  box-shadow: 0 8px 32px 0 #21215b;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 2rem; /* Pill shape */
+  padding: 0.8rem 1.5rem;
+  z-index: 1000;
 }
 
-/* Pill-shaped Social Links */
+/* Social Link Styling */
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* Fixed width for circular shape */
-  height: 40px; /* Fixed height for circular shape */
-  font-size: 16px;
+  width: 50px; /* Increased size */
+  height: 50px; /* Increased size */
+  font-size: 24px; /* Larger icon size */
   text-decoration: none;
-  border-radius: 50%; /* Circular shape */
+  border-radius: 25%; /* Circular shape */
   border: 2px solid transparent; /* Transparent border */
-  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 /* LinkedIn Button */
-.social-link.linkedin {
-  background-color: transparent;
-  border-color: #5c9df1; /* LinkedIn blue border */
-}
-
 .social-link.linkedin i {
   color: #5c9df1; /* LinkedIn blue icon */
 }
 
 /* GitHub Button */
-.social-link.github {
-  background-color: transparent;
-  border-color: #ef159f; /* GitHub green border */
+.social-link.github i {
+  color: #1e1a1d; /* GitHub green icon */
 }
 
-.social-link.github i {
-  color: #ef159f; /* GitHub green icon */
+/* Portfolio Button */
+.social-link.portfolio i {
+  color: #ff6f61; /* Custom color for portfolio icon */
 }
 
 /* Hover Effects */
 .social-link:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(2.1); /* Slightly enlarge the icon */
 }
 
-.social-link.linkedin:hover {
-  background-color: rgba(0, 119, 181, 0.1); /* Light LinkedIn blue background */
-}
-
-.social-link.github:hover {
-  background-color: rgba(40, 167, 69, 0.1); /* Light GitHub green background */
+/* Remove background color box effect on hover */
+.social-link.linkedin:hover,
+.social-link.github:hover,
+.social-link.portfolio:hover {
+  background-color: transparent; /* No background color on hover */
 }
 
 /* Active (Click) Effects */
 .social-link:active {
-  transform: scale(0.95);
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95); /* Slightly shrink on click */
 }
 
 
@@ -337,6 +336,10 @@ textarea::-webkit-scrollbar-thumb:hover {
   .card {
     width: 90%; /* Adjusted width for smaller screens */
   }
+  .social-card {
+    bottom: 10px; /* Move the social card higher */
+    padding: 0.6rem 1.2rem; /* Reduce padding for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
@@ -347,6 +350,11 @@ textarea::-webkit-scrollbar-thumb:hover {
   .container {
     flex-direction: column; /* Stack elements vertically on smaller screens */
     gap: 1rem; /* Reduced gap for smaller screens */
+  }
+  .social-card {
+    bottom: 5px; /* Move the social card even higher */
+    gap: 10px; /* Reduce gap between icons */
+    padding: 0.5rem 1rem; /* Further reduce padding */
   }
 
   .title {
