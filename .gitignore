@@ -106,6 +106,7 @@ runs/
 *.flac
 
 # Ignore any large database files
+*.csv
 *.db
 *.sqlite
 *.sqlite3
