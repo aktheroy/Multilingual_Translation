@@ -37,8 +37,8 @@ Model/
 # Ignore TensorBoard logs
 runs/
 
-# Ignore folder logs
-Datasets/
+Backend/ML/Datasets/
+
 
 # Ignore temporary files
 *.swp
