@@ -107,6 +107,9 @@ runs/
 
 # Ignore any large database files
 *.csv
+*.en
+*.hi
+
 *.db
 *.sqlite
 *.sqlite3
