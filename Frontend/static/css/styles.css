@@ -75,8 +75,7 @@ body {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
-  background-size: 1rem;
-  padding-right: 1.5rem; /* Add padding to prevent text from overlapping with the arrow */
+  background-size: 2rem;
 }
 
 /* Customize the dropdown options */
@@ -153,11 +152,10 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 .word-count {
   position: absolute;
-  bottom: 10px; /* Position at the bottom of the textarea */
-  right: 10px; /* Position at the right of the textarea */
+  bottom: 26px; /* Position at the bottom of the textarea */
+  right: 6px; /* Position at the right of the textarea */
   font-size: 14px;
   color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -254,17 +252,17 @@ textarea::-webkit-scrollbar-thumb:hover {
 
 /* LinkedIn Button */
 .social-link.linkedin i {
-  color: #5c9df1; /* LinkedIn blue icon */
+  color: #006af3; /* LinkedIn blue icon */
 }
 
 /* GitHub Button */
 .social-link.github i {
-  color: #1e1a1d; /* GitHub green icon */
+  color: #f9f9f9; /* GitHub green icon */
 }
 
 /* Portfolio Button */
 .social-link.portfolio i {
-  color: #ff6f61; /* Custom color for portfolio icon */
+  color: #00b6f3; /* Custom color for portfolio icon */
 }
 
 /* Hover Effects */
