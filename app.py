@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, jsonify
-from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 # from flasgger import Swagger
 
 
 # Load the model and tokenizer
 def load_model():
-    model = M2M100ForConditionalGeneration.from_pretrained("aktheroy/4bit_translate_en_el_hi")
-    tokenizer = M2M100Tokenizer.from_pretrained("aktheroy/4bit_translate_en_el_hi")
+    model = AutoModelForSeq2SeqLM.from_pretrained("aktheroy/4bit_translate_en_el_hi")
+    tokenizer = AutoTokenizer.from_pretrained("aktheroy/4bit_translate_en_el_hi")
     print(f"Model loaded: {model.__class__.__name__}")
     print(f"Tokenizer loaded: {tokenizer.__class__.__name__}")
     return model, tokenizer
