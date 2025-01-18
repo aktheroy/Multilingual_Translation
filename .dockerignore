@@ -11,13 +11,7 @@
 **/temp/
 
 # Ignore specific datasets or large files that are not needed in the Docker image
-Backend/ML/Datasets/WikiMatrix/WikiMatrix.en-hi.en
-Backend/ML/Datasets/WikiMatrix/WikiMatrix.en-hi.hi
-
-# Ignore specific notebooks that are not needed in the Docker image
-Backend/ML/Notebooks/Data Manipulation.ipynb
-Backend/MLNotebooks/Google T5 +Lora.ipynb
-Backend/MLNotebooks/M2M100 and Lora.ipynb
+**/Backend/
 
 # Ignore image files that are not needed in the Docker image
 *image.png
