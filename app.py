@@ -6,8 +6,8 @@ from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
 
 # Load the model and tokenizer
 def load_model():
-    model = M2M100ForConditionalGeneration.from_pretrained("aktheroy/Hipster")
-    tokenizer = M2M100Tokenizer.from_pretrained("aktheroy/Hipster")
+    model = M2M100ForConditionalGeneration.from_pretrained("aktheroy/4bit_translate_en_el_hi")
+    tokenizer = M2M100Tokenizer.from_pretrained("aktheroy/4bit_translate_en_el_hi")
     print(f"Model loaded: {model.__class__.__name__}")
     print(f"Tokenizer loaded: {tokenizer.__class__.__name__}")
     return model, tokenizer
