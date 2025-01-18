@@ -80,8 +80,7 @@ body {
 
 /* Customize the dropdown options */
 .language-pair select option {
-  background: #2c49dc; /* Background color of the options */
-  color: whitesmoke; /* Text color of the options */
+  color: rgb(0, 0, 0); /* Text color of the options */
   padding: 0.5rem; /* Add padding to the options */
 }
 
