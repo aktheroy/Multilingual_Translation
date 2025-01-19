@@ -4,7 +4,7 @@ A scalable and efficient multilingual translation system powered by fine-tuned L
 
 ## 🚀 Key Features
 
-- High-accuracy translations with 32% BLEU score
+- High-accuracy translations in English, Hindi and Greek with 24% BLEU score
 - Real-time translation processing with sub-400ms latency
 - Responsive full-stack interface with REST API integration
 - Optimized model performance using LoRA and quantization
@@ -74,15 +74,34 @@ docker run -p 5000:5000 translation-model
 
 ## 📁 Project Structure
 ```
+## 📁 Project Structure
 .
-├── app/
-│   ├── models/          # ML model implementations
-│   ├── preprocessing/   # Data preprocessing scripts
-│   └── api/            # REST API endpoints
-├── frontend/           # Web interface
-├── tests/             # Unit and integration tests
-├── Dockerfile         # Container configuration
-└── requirements.txt   # Python dependencies
+├── Backend/
+│   ├── ml/
+│   │   ├── models/                                         # Saved model files for local/production use
+│   │   └── notebooks/                                      # Jupyter notebooks for experiments
+│   │       ├── EDA.ipynb                                   # Exploratory Data Analysis
+│   │       ├── NLP pipeline.ipynb                          # Data preprocessing pipeline
+│   │       ├── M2M100.ipynb                                # Base M2M100 implementation
+│   │       ├── M2M100(Lora).ipynb                          # LoRA fine-tuning
+│   │       ├── 4bit FB(M2M100)+lora.ipynb                  # 4-bit quantization
+│   │       ├── 4bit FB(M2m100)+lora+Greek+Hindi.ipynb      # Multi-language support
+│   │       └── Bleu_score_BFT.ipynb                        # Performance evaluation
+│   ├── api/                     # REST API endpoints
+│   ├── dataset/                 # Training and evaluation datasets
+│   └── preprocessing/           # Production preprocessing scripts
+├── Frontend/
+│   ├── Templates/
+│   │   └── index.html         # Main application template
+│   └── static/
+│       ├── css/
+│       │   └── styles.css     # Custom styling
+│       └── js/
+│           └── script.js      # Frontend logic
+├── tests/                     # Unit and integration tests
+├── Dockerfile                 # Container configuration
+└── requirements.txt           # Python dependencies
+
 ```
 
 ## 📋 API Documentation
