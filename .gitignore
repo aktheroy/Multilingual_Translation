@@ -39,7 +39,7 @@ runs/
 
 # Ignore Files
 Backend/ML/Datasets/
-Backend/ML/Model/Meta/
+Backend/ML/Model/
 Backend/ML/Notebooks/results/
 
 # Ignore temporary files
