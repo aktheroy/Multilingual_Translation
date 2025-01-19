@@ -2,15 +2,6 @@
 
 A scalable and efficient multilingual translation system powered by fine-tuned Large Language Models, featuring real-time translation capabilities across multiple language pairs.
 
-## 🚀 Key Features
-
-- High-accuracy translations in English, Hindi and Greek with 24% BLEU score
-- Real-time translation processing with sub-400ms latency
-- Responsive full-stack interface with REST API integration
-- Optimized model performance using LoRA and quantization
-- Automated ML pipelines for efficient training
-- Containerized deployment on Google Cloud Run
-
 ## 🛠️ Technical Implementation
 
 ### Model Architecture
@@ -38,10 +29,35 @@ A scalable and efficient multilingual translation system powered by fine-tuned L
 
 ## 💻 Tech Stack
 
-- **ML/Data Processing**: Pandas, Scikit-learn, Hugging Face Transformers
-- **Backend**: Flask, REST APIs
-- **Cloud/DevOps**: Google Cloud Run, Docker
-- **Code Quality**: Flake8
+## 💻 Tech Stack
+
+### 🤖 ML/Deep Learning
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-yellow?style=for-the-badge&logo=huggingface&logoColor=white)
+- PEFT (Parameter Efficient Fine-Tuning)
+- BitsAndBytes for quantization
+
+### 📊 Data Processing
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![HuggingFace Datasets](https://img.shields.io/badge/🤗%20Datasets-yellow.svg?style=for-the-badge)
+
+### 📈 Visualization
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+
+### 🔧 Backend
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![REST APIs](https://img.shields.io/badge/REST%20APIs-gray?style=for-the-badge)
+
+### 🎨 Frontend
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
+
+### ☁️ Cloud/DevOps
+![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 ## 🚀 Getting Started
 
