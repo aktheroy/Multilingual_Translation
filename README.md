@@ -29,8 +29,6 @@ A scalable and efficient multilingual translation system powered by fine-tuned L
 
 ## 💻 Tech Stack
 
-## 💻 Tech Stack
-
 ### 🤖 ML/Deep Learning
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-yellow?style=for-the-badge&logo=huggingface&logoColor=white)
