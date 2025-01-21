@@ -11,8 +11,8 @@ app = Flask(
 def load_model():
     try:
         # Load model and tokenizer from Hugging Face Hub
-        model = AutoModelForSeq2SeqLM.from_pretrained("aktheroy/4bit_translate_en_el_hi")
-        tokenizer = AutoTokenizer.from_pretrained("aktheroy/4bit_translate_en_el_hi")
+        model = AutoModelForSeq2SeqLM.from_pretrained("aktheroy/FT_Translate_en_el_hi")
+        tokenizer = AutoTokenizer.from_pretrained("aktheroy/FT_Translate_en_el_hi")
         print(f"Model loaded: {model.__class__.__name__}")
         print(f"Tokenizer loaded: {tokenizer.__class__.__name__}")
         return model, tokenizer
