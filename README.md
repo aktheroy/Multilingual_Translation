@@ -1,5 +1,5 @@
 ## 🌟 Demo
-![Demo](/Backend/Demo.mp4)
+https://github.com/user-attachments/assets/31badbbf-7226-4d41-b8a1-d77158298d9d
 
 
 # Multilingual Translation Model
