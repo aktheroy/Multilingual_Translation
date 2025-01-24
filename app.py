@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM,BitsAndBytesConfig
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 # Initialize Flask app
 app = Flask(
