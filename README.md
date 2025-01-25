@@ -7,6 +7,7 @@ https://github.com/user-attachments/assets/31badbbf-7226-4d41-b8a1-d77158298d9d
 A scalable and efficient multilingual translation system powered by fine-tuned Large Language Models, featuring real-time translation capabilities across multiple language pairs.
 
 ## Table of Contents
+- [Flowchart: Development Process](#-Flowchart)
 - [Technical Implementation](#-technical-implementation)
 - [Performance Metrics](#-performance-metrics)
 - [Tech Stack](#-tech-stack)
@@ -15,6 +16,10 @@ A scalable and efficient multilingual translation system powered by fine-tuned L
 - [API Documentation](#-api-documentation)
 - [Contributing](#-contributing)
 - [License](#-license)
+
+
+## 🛠️ Flowchart
+![Untitled design](https://github.com/user-attachments/assets/336a8316-fd46-449d-a434-25ebd10326cc)
 
 ## 🛠️ Technical Implementation
 
