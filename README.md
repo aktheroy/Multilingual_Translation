@@ -1,7 +1,6 @@
 ## 🌟 Demo
 https://github.com/user-attachments/assets/31badbbf-7226-4d41-b8a1-d77158298d9d
 
-
 # Multilingual Translation Model
 
 A scalable and efficient multilingual translation system powered by fine-tuned Large Language Models, featuring real-time translation capabilities across multiple language pairs.
@@ -19,7 +18,12 @@ A scalable and efficient multilingual translation system powered by fine-tuned L
 
 
 ## 🛠️ Flowchart
-![Untitled design](https://github.com/user-attachments/assets/336a8316-fd46-449d-a434-25ebd10326cc)
+### Live Link
+[![Untitled design](https://github.com/user-attachments/assets/336a8316-fd46-449d-a434-25ebd10326cc)](https://fimage-395239392614.europe-west2.run.app/)
+
+**Note:** The live deployment is hosted on Google Cloud Platform. Please allow up to **2 minutes for cold start** if the service is inactive.
+
+---
 
 ## 🛠️ Technical Implementation
 
@@ -140,6 +144,22 @@ Content-Type: application/json
 }
 ```
 
+#### Example: Greek Translation
+```json
+{
+    "source_text": "Hello, how are you?",
+    "source_lang": "en",
+    "target_lang": "el"
+}
+```
+
+#### Response
+```json
+{
+    "translated_text": "Γειά σου, πώς είσαι;"
+}
+```
+
 #### Supported Languages
 - English (en)
 - Hindi (hi)
@@ -174,9 +194,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-### **4. Final Notes**
+### **Final Notes**
 - Ensure the **ports** in your README match the ports used in your Flask app and Docker configuration.
 - Add a **demo** or **screenshot** to make your README more engaging.
 - Consider adding a **Future Work** or **Challenges** section to provide more context about your project.
 
-Let me know if you need further assistance! 🚀
+🚀
