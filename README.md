@@ -203,10 +203,3 @@ Status: 500
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-### **Final Notes**
-- Ensure the **ports** in your README match the ports used in your Flask app and Docker configuration.
-- Add a **demo** or **screenshot** to make your README more engaging.
-- Consider adding a **Future Work** or **Challenges** section to provide more context about your project.
-
-🚀
