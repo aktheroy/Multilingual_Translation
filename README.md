@@ -25,7 +25,7 @@ Here’s the updated section with the live link separated below the image and se
 ### Live Link
 ![Untitled design](https://github.com/user-attachments/assets/336a8316-fd46-449d-a434-25ebd10326cc)
 
-[Live Deployment on Google Cloud Platform](https://fimage-395239392614.europe-west2.run.app/{:target="_blank"})
+[Live Deployment on Google Cloud Platform](https://fimage-395239392614.europe-west2.run.app/)
 
 **Note:** The live deployment is hosted on Google Cloud Platform. Please allow up to **2 minutes for cold start** if the service is inactive.
 
