@@ -24,6 +24,7 @@ def load_model():
 def translate_text(model, tokenizer, source_text, source_lang, target_lang):
     try:
         # Set source language and tokenize input text
+        # pt is for py torch.
         tokenizer.src_lang = source_lang
         encoded_text = tokenizer(source_text, return_tensors="pt")
 
