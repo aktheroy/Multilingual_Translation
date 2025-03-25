@@ -161,4 +161,3 @@ mypy --strict --ignore-missing-imports .
 ```
 
 **License:** [Apache 2.0](LICENSE) | **Contact:** [aktheroy@gmail.com](mailto:aktheroy@gmail.com)
-```
