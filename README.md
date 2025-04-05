@@ -47,20 +47,39 @@ https://github.com/user-attachments/assets/31badbbf-7226-4d41-b8a1-d77158298d9d
 ## 🧩 Project Structure
 
 ```bash
-.
-├── ml_pipeline/               # Machine Learning Components
-│   ├── quantization/          # 4-bit model configs
-│   ├── lora_adapters/         # Fine-tuned adapters
-│   └── evaluation/            # BLEU & COMET metrics
-├── api/                       # Flask REST API
-│   ├── app.py                 # Main application
-│   └── Dockerfile             # Cloud deployment
-├── web/                       # Frontend
-│   ├── templates/             # Jinja templates
-│   └── static/                # CSS/JS assets
-└── notebooks/                 # Experimental Research
-    ├── 4bit_quantization.ipynb
-    └── lora_finetuning.ipynb
+|-- .DS_Store                     # macOS-specific metadata file (can be ignored)
+|-- .gitignore                    # Specifies files and folders to exclude from version control
+|-- LICENSE                       # License file detailing the project's usage terms
+|-- README.md                     # Project overview, setup instructions, and usage details
+|-- app.yaml                      # Configuration file for deploying the app on platforms like Google App Engine
+|-- requirements.txt              # List of Python dependencies required for the project
+|-- Api                           # Backend API components
+|   |-- Dockerfile                # Instructions for building a Docker container for the API
+|   |-- app.py                    # Main Flask application file defining API endpoints
+|-- Backend                       # Backend-related code, models, and research notebooks
+|   |-- Demo.mp4                  # Video demonstration of the project or specific features
+|   |-- ML pipeline               # Machine Learning pipeline components
+|   |   |-- 4&16&32 bits.png      # Visualization of quantization results for 4-bit, 16-bit, and 32-bit models
+|   |   |-- EDA.ipynb             # Exploratory Data Analysis notebook
+|   |   |-- FT-Greek+Hindi.ipynb  # Fine-tuning experiments for Greek and Hindi languages
+|   |   |-- M2M100.ipynb          # Notebook for working with the M2M100 multilingual translation model
+|   |   |-- NLP pipeline.ipynb    # End-to-end NLP pipeline implementation
+|   |   |-- image.png             # Image file (likely used for visualization or documentation)
+|   |   |-- Evaluation            # Folder containing evaluation metrics and scripts
+|   |   |   |-- Bleu_score_.ipynb # Notebook calculating BLEU scores for baseline fine-tuned models
+|   |   |-- Lora                  # Folder for LoRA (Low-Rank Adaptation) fine-tuning experiments
+|   |   |   |-- M2M100.ipynb      # Notebook for fine-tuning M2M100 using LoRA techniques
+|   |   |-- Quantization          # Folder for model quantization experiments
+|   |       |-- 4bit+lora.ipynb   # Notebook for 4-bit quantization of M2M100 with LoRA
+|-- Frontend                      # Frontend components (HTML, CSS, JS)
+|   |-- .DS_Store                 # macOS-specific metadata file (can be ignored)
+|   |-- Templates                 # Jinja templates or HTML files for rendering web pages
+|   |   |-- index.html            # Main HTML template for the frontend
+|   |-- static                    # Static assets (CSS, JS, images, etc.)
+|       |-- css                   # Folder for CSS stylesheets
+|       |   |-- styles.css        # Main CSS file for styling the frontend
+|       |-- js                    # Folder for JavaScript files
+|           |-- script.js         # Main JavaScript file for interactivity
 ```
 
 ## ⚡ Quick Start

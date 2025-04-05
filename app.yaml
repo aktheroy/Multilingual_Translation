@@ -1,1 +1,30 @@
-runtime: python312
+
+# Specifies the runtime environment for the application
+runtime: python39 
+
+# Entry point for the application
+entrypoint: gunicorn -b :$PORT app:app  # Uses Gunicorn to serve the Flask app
+
+# Environment variables (optional)
+env_variables:
+  FLASK_ENV: production  # Set Flask environment to production
+  SECRET_KEY: "your_secret_key_here"  # Replace with a secure secret key
+  DATABASE_URL: "your_database_connection_string_here"  # Replace with your database URL
+
+# Automatic scaling configuration (optional)
+automatic_scaling:
+  target_cpu_utilization: 0.65  # Target CPU usage for scaling
+  min_instances: 1              # Minimum number of instances to keep running
+  max_instances: 10             # Maximum number of instances to scale up to
+
+handlers:
+  - url: /static  # Serve static files (CSS, JS, images)
+    static_dir: Frontend/static
+
+  - url: /.*      # Route all other requests to the Flask app
+    script: auto
+
+
+# Optional: Health checks for monitoring the app's status
+health_check:
+  enable_health_check: True
