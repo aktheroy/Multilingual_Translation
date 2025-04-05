@@ -87,7 +87,7 @@ https://github.com/user-attachments/assets/31badbbf-7226-4d41-b8a1-d77158298d9d
 ### Local Development
 ```bash
 # Clone with large file support
-git clone https://github.com/yourusername/multilingual-translation.git
+git clone https://github.com/aktheroy/multilingual-translation.git
 cd multilingual-translation
 
 # Install with optimized dependencies
